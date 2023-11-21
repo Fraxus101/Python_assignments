@@ -1,0 +1,32 @@
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("ninjutsu" , "2023-05-04 15:59:21", "2016-05-04 15:59:21"),
+("genjutsu" , "2023-05-04 15:59:21", "2016-05-04 15:59:21"),
+("taijutsu" , "2023-05-04 15:59:21", "2023-05-04 15:59:21");
+
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dojos;
+
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Kumogakure" , "2023-05-04 15:59:21", "2016-05-04 15:59:21"),
+("Sunagakure" , "2023-05-04 15:59:21", "2016-05-04 15:59:21"),
+("Iwagakure" , "2023-05-04 15:59:21", "2023-05-04 15:59:21");
+
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id) 
+VALUES ("Paul", "Griffin", 25, 4), ("stewart", "graze", 29, 4), ("amir", "farouk", 30, 4),
+	("amira", "yahyaoui", 19, 5), ("alaa", "coolman", 22, 5), ("souhir", "beji", 26, 5),
+        ("Leon", "Kennedy", 27, 6), ("Goerge", "bush", 28, 6), ("Obama", "care", 23, 6);
+
+
+SELECT * FROM ninjas
+WHERE dojos_id = 4;
+
+
+SELECT * FROM ninjas
+WHERE dojos_id = 6;
+
+SELECT first_name , dojos.name FROM ninjas 
+JOIN dojos ON dojos.id = ninjas.dojos_id
+WHERE ninjas.id = 9;
