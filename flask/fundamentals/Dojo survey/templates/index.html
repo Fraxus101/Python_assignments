@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" style="display: flex; flex-direction: column; align-items: center; border: 2px solid black; width: 500px; height: 400px;">
+        <form action="/request" method="post" style="display: flex; flex-direction: column; ">
+            <label for="name">Name: </label>
+            <input type="name" name="name">
+            <label for="dojo location">Dojo location: </label>
+            <select name="location" id="" name="location">
+                <option value="-Select-">--Select--</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Chicago">Chicago</option>
+                <option value="California">California</option>
+                <option value="Online">Online</option>
+            </select>
+            <label for="favorite language">Favorite language: </label>
+            <select name="language" id="">
+                <option value="-Select-">--Select--</option>
+                <option value="Python">Python</option>
+                <option value="Javascript">Javascript</option>
+                <option value="C++">C++</option>
+                <option value="PHP">PHP</option>
+            </select>
+        <label for="comment">Comment (optional): </label>
+        <textarea name="comment" id="" cols="30" rows="10" name="comment"></textarea>
+        <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
